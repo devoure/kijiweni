@@ -32,13 +32,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+
+    'kijiwe.apps.KijiweConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'kijiwe.apps.KijiweConfig'
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'kijiweni.wsgi.application'
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
 
 # Database

@@ -16,9 +16,62 @@
   font-style:italic;
   font-family:Cursive;
   letter-spacing: 3px;}
+.slide{
+  background:rgba(255,0,0,0.7);
+  overflow:hidden;
+
+}
+.dashA{
+  background:rgba(255, 0, 0, 0.4);
+  float:left;
+  width:70%;
+  padding:5px;
+  margin:10px;
+  border-radius:6px;
+  }
+.selected{
+  color:black;
+  
+}
+ul.nav{
+  list-style-type:none;}
+li{
+  display:inline;
+  padding:60px;}
+li a{
+  text-decoration:none;
+  text-align:center;
+  color:black;
+  letter-spacing:2px;
+  font-family:Cursive;
+  font-weight:bold;
+  font-size:20px;}
+li a:hover{
+  background-color:black;
+  color:white;
+  padding:10px;
+  border-radius:4px;
+}  
+li a:active{
+  background-color:white;
+}
+
+.dashB{
+  background:rgba(255, 0, 0, 0.4);
+  padding:20px;
+  margin:10px;
+  border-radius:6px;
+  width:10%;
+  float:right;
+  text-align:center;
+  font-family: Cursive;
+  font-size:20px;
+  font-weight:bold;
+  letter-spacing: 2px; 
+  }
 h1{
   font-weight:bold;
-  letter-spacing:1px;
+  letter-spacing:2px;
   font-family:Serif;
   font-size:40px;
   color:black;
@@ -49,3 +102,12 @@ input[type=submit]{
   background:rgba(255, 0, 0, 0.4);
   padding:40px;
   border-radius:4px;}
+.line{
+  border-width: 3px;
+  color:black;
+  background-color: black;
+}
+.out_body{
+  background: rgba(255, 0, 0, 0.7 );
+  padding:20px;
+}

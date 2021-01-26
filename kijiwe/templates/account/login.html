@@ -2,9 +2,12 @@
 
 {% block title %}Log-in{% endblock %}
 {% block content %}
+
 <div class="form">
 <h1>Log in.</h1>
 <p>Please, use the following form to log in:</p>
+<p>If you dont have an account<a href"{% url "register" %}">Register
+  here</a></p>
 <form id="form_content"method="post">
   {{form.as_p}}
   {% csrf_token %}

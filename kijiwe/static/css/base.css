@@ -111,3 +111,44 @@ input[type=submit]{
   background: rgba(255, 0, 0, 0.7 );
   padding:20px;
 }
+.dropdown{
+  overflow:hidden;
+}
+.dropdown .dropbtn{
+  color:green;
+  outline:none;
+  font-weight:bold;
+  
+}
+.dropdown:hover .dropbtn{
+  background-color:black;
+  color:white;
+  border:none;
+  padding:7px;
+  border-radius:6px;
+}
+.content{
+  display: none;
+  position:absolute;
+}
+.content a{
+  float:none;
+  background-color: black;
+  color:white;
+  text-align;left;
+  text-decoration:none;
+  padding:7px;
+  border-radius:6px;
+  font-family: serf;
+  font-size:11px;
+  letter-spacing: 0px;
+  
+}
+.content a:hover{
+    background-color:red;
+  }
+.dropdown:hover .content{
+  display: block;
+}
+  
+}

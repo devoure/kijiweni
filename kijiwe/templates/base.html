@@ -32,9 +32,10 @@
             Hello {{ request.user.first_name }},
             <a href="{% url "logout" %}">Logout</a>
             <div class="dropdown">
-              <button class="dropbtn">Change</button>
+              <button class="dropbtn">Profile</button>
               <div class="content">
                 <a href="{% url "password_change" %}">change password</a>
+                <a href="{% url "edit" %}">edit profile</a>
               </div>
             </div>
             {% else %}
@@ -43,6 +44,16 @@
           </span>
         </div>
       </div>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li class="{{ message.tags }}">
+          {{ message|safe }}
+          <a href="{% url "dashboard" %}" class ="close">X</a>
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
       <div id="content">
         {% block content%}
         {% endblock %}

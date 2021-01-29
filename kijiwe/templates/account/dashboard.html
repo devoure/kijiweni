@@ -5,5 +5,7 @@
 <div class="form">
 <h1>Dashboard.</h1>
 <hr class="line">
-<p>Welcome to your dashboard.</p>
+<p>Welcome to your dashboard.</br>
+You can now <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url
+                             "password_change" %}">change your password</a>.</p>
 {% endblock %}

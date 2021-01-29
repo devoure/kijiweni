@@ -51,6 +51,10 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+AUTHENTICATION_BACKENDS=[
+        'django.contrib.auth.backends.ModelBackend',
+        'kijiwe.authenticate.EmailAuthBackend'
+        ]
 
 ROOT_URLCONF = 'kijiweni.urls'
 
@@ -133,3 +137,7 @@ EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = 'kijiwe/static/'
+
+#User added files
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media/')

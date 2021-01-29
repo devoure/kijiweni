@@ -150,5 +150,34 @@ input[type=submit]{
 .dropdown:hover .content{
   display: block;
 }
+ul.messages{
+  background-color: black;
+  padding:15px;
+  text-align:center;
+  letter-spacing: 3px;
+  font-weight:bold;
+  border-radius: 6px;
+  margin:2px;
   
 }
+ul.messages li.success{
+  background-color: green;
+  padding:14px;
+  border-radius:10px;
+  
+}
+ul.messages li.error{
+  background-color: red;
+  padding:14px;
+  border-radius:10px;
+  color:black;
+}
+
+
+.close{
+  background-color: black;
+  padding:5px;
+  border-radius:10px;
+  color:white;
+}
+

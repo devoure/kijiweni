@@ -26,7 +26,7 @@ SECRET_KEY = 'e1htbctr%11+dyx6yq=g+d2s_pfotzs(vy09!)hsptrtq8ua6^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1',]
 
 
 # Application definition
@@ -34,12 +34,16 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
 
     'kijiwe.apps.KijiweConfig',
+    'images.apps.ImagesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'social_django',
+    'django_extensions',
+    'easy_thumbnails'
 ]
 
 MIDDLEWARE = [
@@ -53,8 +57,16 @@ MIDDLEWARE = [
 ]
 AUTHENTICATION_BACKENDS=[
         'django.contrib.auth.backends.ModelBackend',
-        'kijiwe.authenticate.EmailAuthBackend'
+        'kijiwe.authenticate.EmailAuthBackend',
+        'social_core.backends.facebook.FacebookOAuth2',
+        'social_core.backends.google.GoogleOAuth2'
         ]
+SOCIAL_AUTH_FACEBOOK_KEY=os.environ['SOCIAL_AUTH_FACEBOOK_KEY']
+SOCIAL_AUTH_FACEBOOK_SECRET=os.environ['SOCIAL_AUTH_FACEBOOK_SECRET']
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=os.environ['SOCIAL_AUTH_GOOGLE_KEY']
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET=os.environ['SOCIAL_AUTH_GOOGLE_SECRET']
+
+
 
 ROOT_URLCONF = 'kijiweni.urls'
 

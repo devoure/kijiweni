@@ -5,7 +5,12 @@
 <div class="form">
 <h1>Dashboard.</h1>
 <hr class="line">
-<p>Welcome to your dashboard.</br>
-You can now <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url
-                             "password_change" %}">change your password</a>.</p>
+<p>Welcome to your dashboard.<br/></p>
+{% with total_images_created=request.user.images_created.count %}
+<p>You have bookmarked {{ total_images_created }} image{{ total_images_created|pluralize }}.</p>
+{% endwith %}
+<p>Drag the following button to your bookmarks toolbar to bookmark images
+from<br/>other websites<a href="javascript:{% include "bookmarklet_launcher.js"%}" class="button_book">Bookmark it</a></p>
+<p>You can now <a href="{% url "edit" %}">edit your profile</a> or <a href="{% url "password_change" %}">change your password</a>.</p>
+
 {% endblock %}

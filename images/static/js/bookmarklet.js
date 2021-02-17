@@ -1,7 +1,7 @@
 (function(){
   alert('bookmarklet openned');
   var jquery_version = '3.4.1';
-  var site_url = 'https://bf78241bc28e.ngrok.io/';
+  var site_url = ' https://56e2b3946a6a.ngrok.io/';
   var static_url = (site_url + 'kijiweni/images/static/');
   //the pixel sizes for images
   var min_width = 100;

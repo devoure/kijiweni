@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from django.urls import reverse_lazy
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 
     'kijiwe.apps.KijiweConfig',
     'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,6 +63,8 @@ AUTHENTICATION_BACKENDS=[
         'social_core.backends.facebook.FacebookOAuth2',
         'social_core.backends.google.GoogleOAuth2'
         ]
+ABSOLUTE_URL_OVERRIDES = {
+        'auth.user': lambda u: reverse_lazy('user_detail', args=[u.username])}
 SOCIAL_AUTH_FACEBOOK_KEY=os.environ['SOCIAL_AUTH_FACEBOOK_KEY']
 SOCIAL_AUTH_FACEBOOK_SECRET=os.environ['SOCIAL_AUTH_FACEBOOK_SECRET']
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY=os.environ['SOCIAL_AUTH_GOOGLE_KEY']
